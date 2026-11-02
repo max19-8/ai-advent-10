@@ -6,7 +6,7 @@
 
 | День | Проект | Язык и стек | Статус |
 | --- | --- | --- | --- |
-| 01 | [Запрос к LLM через API](projects/day-01-llm-api/) | Python, requests, CLI | Описание подготовлено, реализация впереди |
+| 01 | [Запрос к LLM через API](projects/day-01-llm-api/) | Python, requests, Cloudflare Workers AI, CLI | Готово; реальный API-запрос проверен пользователем |
 
 ## Организация репозитория
 
