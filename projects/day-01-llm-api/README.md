@@ -21,19 +21,17 @@ python -m pip install -r requirements.txt
 
 В [панели Cloudflare](https://dash.cloudflare.com/) откройте **Workers AI → Use REST API**, создайте токен по шаблону **Create a Workers AI API Token** и скопируйте **Account ID**. Для модели по умолчанию подходит план Workers Free.
 
-Задайте переменные в терминале macOS (zsh). После каждой команды `read` вставьте запрошенное значение и нажмите Enter; ввод токена скрыт.
+Один раз скопируйте шаблон в папке задания:
 
-```zsh
-read -rs 'CLOUDFLARE_API_TOKEN?Cloudflare API token: '
-export CLOUDFLARE_API_TOKEN
-printf '\n'
-read -r 'CLOUDFLARE_ACCOUNT_ID?Cloudflare Account ID: '
-export CLOUDFLARE_ACCOUNT_ID
+```bash
+cp -n .env.example .env
 ```
+
+В `.env` заполните `CLOUDFLARE_API_TOKEN` и `CLOUDFLARE_ACCOUNT_ID`. Программа автоматически читает файл рядом с `main.py`, независимо от текущей папки терминала. Переменные окружения имеют приоритет над `.env`.
 
 ## Запуск
 
-В том же терминале с активным `.venv`:
+С активным `.venv`:
 
 ```bash
 python main.py
@@ -41,6 +39,6 @@ python main.py
 
 Введите вопрос и дождитесь ответа. Каждый запуск отправляет один запрос.
 
-Токен не добавляйте в Git. `.env` автоматически не загружается. Необязательная переменная `CLOUDFLARE_MODEL` задаёт другую модель; клиент ожидает формат ответа `result.response`.
+`.env` исключён из Git; публикуется только `.env.example` без секретов. Необязательная переменная `CLOUDFLARE_MODEL` задаёт другую модель; клиент ожидает формат ответа `result.response`.
 
 [Документация API](https://developers.cloudflare.com/workers-ai/get-started/rest-api/) · [Бесплатная квота](https://developers.cloudflare.com/workers-ai/platform/pricing/)

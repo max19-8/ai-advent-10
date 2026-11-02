@@ -3,17 +3,20 @@
 import os
 import re
 import sys
+from pathlib import Path
 from urllib.parse import quote
 
 import requests
+from dotenv import load_dotenv
 
 
 def main():
+    load_dotenv(Path(__file__).resolve().with_name(".env"), override=False)
     token = os.environ.get("CLOUDFLARE_API_TOKEN", "").strip()
     account_id = os.environ.get("CLOUDFLARE_ACCOUNT_ID", "").strip()
     if not token or not account_id:
         print(
-            "Ошибка: задайте CLOUDFLARE_API_TOKEN и CLOUDFLARE_ACCOUNT_ID.",
+            "Ошибка: задайте CLOUDFLARE_API_TOKEN и CLOUDFLARE_ACCOUNT_ID в .env или окружении.",
             file=sys.stderr,
         )
         return 1
