@@ -1,0 +1,29 @@
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# JavaScript / TypeScript
+node_modules/
+.next/
+coverage/
+
+# Build output
+dist/
+build/
+
+# Local editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
