@@ -7,3 +7,4 @@
 | День | Проект | Стек |
 | --- | --- | --- |
 | 01 | [Запрос к LLM через API](projects/day-01-llm-api/) | Python, requests, Cloudflare Workers AI |
+| 02 | [Формат ответа](projects/day-02-response-format/) | Python, JSON Schema, Cloudflare Workers AI |
