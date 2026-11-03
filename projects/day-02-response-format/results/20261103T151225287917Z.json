@@ -1,0 +1,179 @@
+{
+  "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "task": "Предложи три учебных проекта на Python для начинающего. Для каждого укажи название и одним коротким предложением объясни, чему он научит.",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "answer"
+    ],
+    "additionalProperties": false
+  },
+  "records": [
+    {
+      "request": {
+        "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Предложи три учебных проекта на Python для начинающего. Для каждого укажи название и одним коротким предложением объясни, чему он научит."
+          }
+        ],
+        "temperature": 0.6,
+        "stream": false,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "answer",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "answer"
+              ],
+              "additionalProperties": false
+            }
+          }
+        }
+      },
+      "api_ok": true,
+      "http_status": 200,
+      "raw_response": "{\"id\":\"id-1793718735556\",\"object\":\"chat.completion\",\"created\":1793718735,\"model\":\"@cf/meta/llama-3.3-70b-instruct-fp8-fast\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"answer\\\": \\\"1. **Игра \\\\\\\"Камень-Ножницы-Бумага\\\\\\\"**: научит создавать простую игру с использованием условных операторов и функций. 2. **Управление личными финансами**: научит работать с данными, структурами и файлами для ведения личных финансов. 3. **Чат-бот**: научит создавать простого чат-бота с использованием библиотеки NLTK для обработки естественного языка.\\\"}\",\"refusal\":null,\"annotations\":null,\"audio\":null,\"function_call\":null,\"reasoning\":null},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null,\"token_ids\":null,\"routed_experts\":null}],\"usage\":{\"prompt_tokens\":71,\"completion_tokens\":120,\"total_tokens\":191,\"prompt_tokens_details\":{\"cached_tokens\":0},\"neurons\":26.470043182373047}}",
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "answer": "{\"answer\": \"1. **Игра \\\"Камень-Ножницы-Бумага\\\"**: научит создавать простую игру с использованием условных операторов и функций. 2. **Управление личными финансами**: научит работать с данными, структурами и файлами для ведения личных финансов. 3. **Чат-бот**: научит создавать простого чат-бота с использованием библиотеки NLTK для обработки естественного языка.\"}",
+      "usage": {
+        "prompt_tokens": 71,
+        "completion_tokens": 120,
+        "total_tokens": 191,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 26.470043182373047
+      },
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true
+      },
+      "mode": "schema",
+      "repeat": 1
+    },
+    {
+      "request": {
+        "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Предложи три учебных проекта на Python для начинающего. Для каждого укажи название и одним коротким предложением объясни, чему он научит."
+          }
+        ],
+        "temperature": 0.6,
+        "stream": false
+      },
+      "api_ok": true,
+      "http_status": 200,
+      "raw_response": "{\"id\":\"id-1793718741136\",\"object\":\"chat.completion\",\"created\":1793718741,\"model\":\"@cf/meta/llama-3.3-70b-instruct-fp8-fast\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"1. **Калькулятор**: Этот проект научит вас создавать простые интерфейсы пользователя и обрабатывать ввод данных.\\n2. **Угадай число**: Этот проект научит вас использовать циклы и условные операторы для реализации простой игровой логики.\\n3. **Чат-бот**: Этот проект научит вас создавать простые диалоговые системы и обрабатывать текстовый ввод пользователя.\",\"refusal\":null,\"annotations\":null,\"audio\":null,\"function_call\":null,\"reasoning\":null},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":null,\"token_ids\":null,\"routed_experts\":null}],\"usage\":{\"prompt_tokens\":71,\"completion_tokens\":96,\"total_tokens\":167,\"prompt_tokens_details\":{\"cached_tokens\":0},\"neurons\":21.554716110229492}}",
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "answer": "1. **Калькулятор**: Этот проект научит вас создавать простые интерфейсы пользователя и обрабатывать ввод данных.\n2. **Угадай число**: Этот проект научит вас использовать циклы и условные операторы для реализации простой игровой логики.\n3. **Чат-бот**: Этот проект научит вас создавать простые диалоговые системы и обрабатывать текстовый ввод пользователя.",
+      "usage": {
+        "prompt_tokens": 71,
+        "completion_tokens": 96,
+        "total_tokens": 167,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 21.554716110229492
+      },
+      "checks": {
+        "json_ok": false,
+        "schema_ok": false,
+        "error": "JSON: Extra data: line 1 column 2 (char 1)"
+      },
+      "mode": "baseline",
+      "repeat": 1
+    },
+    {
+      "request": {
+        "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Предложи три учебных проекта на Python для начинающего. Для каждого укажи название и одним коротким предложением объясни, чему он научит."
+          }
+        ],
+        "temperature": 0.6,
+        "stream": false,
+        "max_tokens": 50
+      },
+      "api_ok": true,
+      "http_status": 200,
+      "raw_response": "{\"id\":\"id-1793718742943\",\"object\":\"chat.completion\",\"created\":1793718742,\"model\":\"@cf/meta/llama-3.3-70b-instruct-fp8-fast\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"1. **Калькулятор**: Научит базовому синтаксису Python и работе с функциями.\\n2. **Управление личной библиотекой**: Позволит познакомиться с работой\",\"refusal\":null,\"annotations\":null,\"audio\":null,\"function_call\":null,\"reasoning\":null},\"logprobs\":null,\"finish_reason\":\"length\",\"stop_reason\":null,\"token_ids\":null,\"routed_experts\":null}],\"usage\":{\"prompt_tokens\":71,\"completion_tokens\":50,\"total_tokens\":121,\"prompt_tokens_details\":{\"cached_tokens\":0},\"neurons\":12.133670806884766}}",
+      "finish_reason": "length",
+      "stop_reason": null,
+      "answer": "1. **Калькулятор**: Научит базовому синтаксису Python и работе с функциями.\n2. **Управление личной библиотекой**: Позволит познакомиться с работой",
+      "usage": {
+        "prompt_tokens": 71,
+        "completion_tokens": 50,
+        "total_tokens": 121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 12.133670806884766
+      },
+      "checks": {
+        "json_ok": false,
+        "schema_ok": false,
+        "error": "JSON: Extra data: line 1 column 2 (char 1)"
+      },
+      "mode": "limited",
+      "repeat": 1
+    },
+    {
+      "request": {
+        "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Предложи три учебных проекта на Python для начинающего. Для каждого укажи название и одним коротким предложением объясни, чему он научит.\nВерни только JSON-объект с единственным обязательным полем answer (строка с ответом на вопрос). Других полей быть не должно. Не добавляй пояснения вне JSON и Markdown-обёртку.\nСразу после JSON напиши маркер <END>, затем закончи ответ."
+          }
+        ],
+        "temperature": 0.6,
+        "stream": false,
+        "stop": [
+          "<END>"
+        ]
+      },
+      "api_ok": true,
+      "http_status": 200,
+      "raw_response": "{\"id\":\"id-1793718745332\",\"object\":\"chat.completion\",\"created\":1793718745,\"model\":\"@cf/meta/llama-3.3-70b-instruct-fp8-fast\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"answer\\\": \\\"Проект \\\\\\\"Калькулятор\\\\\\\" научит работать с переменными и операторами, проект \\\\\\\"Угадай число\\\\\\\" научит использовать циклы и условные операторы, а проект \\\\\\\"Трекер задач\\\\\\\" научит работать с файлами и структурами данных.\\\"}\\n\",\"refusal\":null,\"annotations\":null,\"audio\":null,\"function_call\":null,\"reasoning\":null},\"logprobs\":null,\"finish_reason\":\"stop\",\"stop_reason\":\"<END>\",\"token_ids\":null,\"routed_experts\":null}],\"usage\":{\"prompt_tokens\":139,\"completion_tokens\":66,\"total_tokens\":205,\"prompt_tokens_details\":{\"cached_tokens\":0},\"neurons\":17.223957061767578}}",
+      "finish_reason": "stop",
+      "stop_reason": "<END>",
+      "answer": "{\"answer\": \"Проект \\\"Калькулятор\\\" научит работать с переменными и операторами, проект \\\"Угадай число\\\" научит использовать циклы и условные операторы, а проект \\\"Трекер задач\\\" научит работать с файлами и структурами данных.\"}\n",
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 66,
+        "total_tokens": 205,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "neurons": 17.223957061767578
+      },
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true
+      },
+      "mode": "formatted",
+      "repeat": 1
+    }
+  ]
+}
