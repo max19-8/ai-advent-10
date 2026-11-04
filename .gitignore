@@ -32,3 +32,6 @@ Thumbs.db
 /projects/day-02-response-format/results/*
 !/projects/day-02-response-format/results/20261103T151225287917Z.json
 !/projects/day-02-response-format/results/20261103T151225287917Z.md
+
+# Day 03: selected data lives in results.json; per-run files stay local
+/projects/day-03-reasoning/results/
